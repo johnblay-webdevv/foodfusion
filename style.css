@@ -258,6 +258,7 @@ nav {
 .drawer-links {
     display: flex;
     flex-direction: column;
+    border-top: 2px solid var(--color-brutal-black);
 }
 
 .drawer-link {
@@ -271,10 +272,6 @@ nav {
     padding: 1.25rem 2rem;
     border-bottom: 2px solid var(--color-brutal-black);
     transition: background-color 0.2s, color 0.2s;
-}
-
-.drawer-link:first-child {
-    border-top: 2px solid var(--color-brutal-black);
 }
 
 .drawer-link:hover {
