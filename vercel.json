@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/about", "dest": "/about.html" },
+    { "src": "/recipes", "dest": "/recipes.html" },
+    { "src": "/cookbook", "dest": "/cookbook.html" },
+    { "src": "/contact", "dest": "/contact.html" },
+    { "src": "/culinary-resources", "dest": "/culinary-resources.html" },
+    { "src": "/resources", "dest": "/resources.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
