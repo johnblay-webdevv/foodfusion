@@ -68,12 +68,12 @@
                 <div class="nav-logo-box"></div>
             </div>
 
-            <div class="nav-links-desktop">
-                <a href="#recipe-grid" class="nav-link-item">Recipes</a>
-                <a href="#community" class="nav-link-item">Community</a>
-                <a href="#about" class="nav-link-item">About</a>
-                <a href="#contact" class="nav-link-item">Contact</a>
-            </div>
+            <!-- Hamburger Button -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
 
             <div class="nav-search">
                 <div class="search-container">
@@ -90,6 +90,24 @@
                 <button class="nav-btn active">Join Club</button>
             </div>
         </nav>
+
+        <!-- Mobile / Hamburger Drawer -->
+        <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+            <div class="nav-drawer-overlay" id="nav-drawer-overlay"></div>
+            <div class="nav-drawer-panel">
+                <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">✕</button>
+                <nav class="drawer-links">
+                    <a href="#" class="drawer-link">Home</a>
+                    <a href="#about" class="drawer-link">About Us</a>
+                    <a href="#recipe-grid" class="drawer-link">Recipe Collection</a>
+                    <a href="#community" class="drawer-link">Community Cookbook</a>
+                    <a href="#contact" class="drawer-link">Contact Us</a>
+                    <a href="#resources" class="drawer-link">Culinary Resources</a>
+                    <a href="#education" class="drawer-link">Educational Resources</a>
+                </nav>
+            </div>
+        </div>
+
 
         <!-- Hero Section -->
         <header class="hero" id="hero-section">
