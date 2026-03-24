@@ -1,0 +1,13 @@
+{
+    "name": "culinashare",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "npx -y http-server -p 3000",
+        "build": "mkdir -p dist && cp index.html style.css script.js dist/",
+        "lint": "echo 'No linting configured for vanilla JS'"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
