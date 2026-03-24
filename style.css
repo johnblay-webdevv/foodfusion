@@ -1364,3 +1364,85 @@ footer {
 .hidden {
     display: none !important;
 }
+
+/* ===== MULTI-PAGE STYLES ===== */
+
+/* About Page */
+.about-section { border-bottom: 2px solid var(--color-brutal-black); }
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+@media (min-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .about-grid > div:first-child {
+        border-right: 2px solid var(--color-brutal-black);
+    }
+}
+.about-grid > div:first-child { padding: 4rem 3rem; }
+.about-p {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    opacity: 0.85;
+}
+.about-image { overflow: hidden; border-top: 2px solid var(--color-brutal-black); }
+@media (min-width: 768px) {
+    .about-image { border-top: none; }
+}
+.about-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Culinary Resources Page */
+.resources-section { padding: 3rem 2rem; }
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.resource-card {
+    border: 2px solid var(--color-brutal-black);
+    padding: 2rem;
+    background: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.resource-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--color-brutal-black);
+}
+.resource-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+.resource-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.8;
+    margin-bottom: 1.25rem;
+}
+.resource-link {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-brutal-black);
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-brutal-orange);
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+}
+.resource-link:hover {
+    color: var(--color-brutal-orange);
+}
