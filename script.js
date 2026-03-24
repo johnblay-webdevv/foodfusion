@@ -435,6 +435,42 @@ function init() {
             if (berryBlast) openModal(berryBlast);
         });
     }
+
+    // Hamburger drawer logic
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navDrawer = document.getElementById('nav-drawer');
+    const drawerOverlay = document.getElementById('nav-drawer-overlay');
+    const drawerCloseBtn = document.getElementById('drawer-close-btn');
+    const drawerLinks = document.querySelectorAll('.drawer-link');
+
+    function openDrawer() {
+        navDrawer.classList.add('is-open');
+        navDrawer.setAttribute('aria-hidden', 'false');
+        hamburgerBtn.classList.add('is-open');
+        hamburgerBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+        navDrawer.classList.remove('is-open');
+        navDrawer.setAttribute('aria-hidden', 'true');
+        hamburgerBtn.classList.remove('is-open');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', () => {
+            navDrawer.classList.contains('is-open') ? closeDrawer() : openDrawer();
+        });
+    }
+
+    if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+    if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
+
+    drawerLinks.forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
 }
 
 function renderCategories() {
